@@ -149,6 +149,9 @@ header h1 {
   width: 24%;
   box-sizing: border-box;
 }
+.featured-products .carousel .slider figure:hover {
+  border: solid 1px #ff1500;
+}
 .featured-products .carousel .slider figure img {
   width: 100%;
 }

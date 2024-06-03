@@ -106,6 +106,9 @@ header{
                 background: linear-gradient(180deg, #F8F8F6 0%, #F0F0F0 100%);          
                 width: 24%;
                 box-sizing: border-box;
+                &:hover{
+                    border: solid 1px $mainColor;
+                }
                 img{
                     width: 100%;
                 }
