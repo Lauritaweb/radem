@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.text-black {
+  color: #000000;
+}
+
+.text-main {
+  color: #ff1500;
+}
+
+.text-secondary {
+  color: #1E1E1E !important;
+}
+
+.btn-call-to-action {
+  background-color: #ff1500;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
+  max-width: 400px;
+  font-weight: 300;
+  font-size: 1.4em;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s;
+}
+.btn-call-to-action:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 0;
+  transition: left 0.5s;
+}
+.btn-call-to-action:hover {
+  color: #ff1500 !important;
+  border: solid #ff1500 1px;
+}
+.btn-call-to-action:hover:before {
+  left: 0;
+}
+.btn-call-to-action span {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+header .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 24px;
+  z-index: 300;
+}
+header .menu.scrolled {
+  background-color: white;
+}
+header .menu ul li {
+  text-transform: uppercase;
+}
+header .menu ul li a {
+  font-weight: 320;
+  text-decoration: none;
+  color: #1E1E1E;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+header .menu ul li a:hover {
+  color: #ff1500 !important;
+  background-size: 100% 2px;
+}
+header .menu ul li a.fs-6 {
+  font-size: 0.9em !important;
+}
+header .menu ul .dropdown-menu {
+  z-index: 100;
+}
+header .col-md-8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header h1 {
+  padding-left: 30px;
+}
+
+.our-products a {
+  text-decoration: none;
+  display: block;
+  padding-top: 10px;
+  color: #000000;
+}
+.our-products a h3 {
+  font-weight: 300;
+}
+.our-products a:hover {
+  background-color: rgba(155, 152, 152, 0.2);
+  color: #ff1500;
+  font-weight: 600;
+}
+
+.banner {
+  height: 70vh;
+  background: url(../../img/radem-cocina.png) no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner .container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner .container .btn-call-to-action {
+  width: auto;
+  padding: 8px 10px;
+}
+
+.featured-products .carousel .slider {
+  box-sizing: border-box;
+  gap: 1%;
+}
+.featured-products .carousel .slider figure {
+  border: 1px solid #B3ADAD;
+  padding: 0;
+  background: linear-gradient(180deg, #F8F8F6 0%, #F0F0F0 100%);
+  width: 24%;
+  box-sizing: border-box;
+}
+.featured-products .carousel .slider figure img {
+  width: 100%;
+}
+.featured-products .carousel .slider figure a {
+  text-decoration: none;
+  color: rgb(155, 152, 152);
+}
+
+.contact input.form-control {
+  border: solid 1px #000000;
+  border-radius: 0;
+}
+.contact textarea.form-control {
+  height: 130px;
+  border: solid 1px #000000;
+  border-radius: 0;
+}
+.contact ul {
+  padding-left: 0 !important;
+}
+
+footer {
+  background-color: #1E1E1E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: white;
+}
+
+.wa {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 500;
+  width: 80px;
+  height: 80px;
+}
+
+/*# sourceMappingURL=main.css.map */
