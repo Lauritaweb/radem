@@ -39,9 +39,6 @@ header{
                     }
                 }
             }
-            .dropdown-menu{
-                z-index: 100;
-            }
         }
     }
     .col-md-8{
@@ -151,8 +148,107 @@ footer{
 .wa{
     position: fixed;
     bottom: 20px;
-    right: 50px;
+    right: 20px;
     z-index: 500;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+}
+/////// RESPONSIVE ////////
+@media (width <= 992px){
+    body{
+        padding-top: 10px;
+    }
+    .header{
+        margin-top: 10px;
+        .navbar-toggler{
+            margin-top: 8px;
+        }
+        .menu.scrolled{
+            padding-bottom: 8px;
+        }
+        .row{
+        //    padding-top: 100px;
+           h1{
+            display: none;
+                br{
+                    display: none;
+                }
+           }
+        }
+        .menu{
+            padding: 0;
+            .navbar-brand{
+               .logo{
+                width: 130px;
+               }
+            }
+        }
+    }
+    // intro CTA 1 
+    .intro{
+        .row{
+            flex-direction: column-reverse;
+            .col-md-5{
+                padding: 0 30px;
+            }
+            img[src="./assets/img/radem-bathroom.png"]{
+                margin-top: 30px;
+            }
+        }
+    }
+    // our products
+    .our-products{
+        .border-end{
+            border: none!important;
+        }
+        .border-black{
+            border-color: transparent!important;
+        }
+        .col-md-3{
+            margin-bottom: 20px;
+        }
+    }
+    // banner
+    .banner{
+        .container{
+            width: 100%!important;
+            .btn-call-to-action{
+                font-size: 1em;
+            }
+        }
+    }
+    // about us
+    .about-us{
+        .row{
+            flex-direction: column-reverse;
+        }
+    }
+    // contact
+    .contact{
+        .row{
+            form,
+            ul{
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+    // slider
+    .featured-products{
+        figure.col-md-4{
+            width: 100%!important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            figcaption{
+                text-align: center;
+            }
+            small{
+                text-align: center;
+                text-wrap: nowrap;
+                font-size: .8em;
+            }
+        }
+    }
 }
