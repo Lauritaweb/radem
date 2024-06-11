@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Css main -->
     <link rel="stylesheet" href="assets/styles/css/main.css">
-
 </head>
 <body>
     <header class="mb-5 header">
@@ -26,11 +25,22 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link fs-6" href="#our-products">Nuestros productos</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Nuestros productos
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Baño</a></li>
+                          <li><a class="dropdown-item" href="#">Muebles</a></li>
+                          <li><a class="dropdown-item" href="#">Cocina</a></li>
+                          <li><a class="dropdown-item" href="#">Puerta</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-6" href="#feature-products">Productos destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Catálogo PDF</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-6" href="#about-us">Nosotros</a>
@@ -56,7 +66,7 @@
                 inovación</h1>
             </div><!-- end col-md-6 -->
             <div class="col-md-8">
-                <img src="./assets/img/radem-living.png" alt="" class="d-flex justify-content-end">
+                <img src="./assets/img/radem-intro.webp" alt="" class="d-flex justify-content-end">
             </div><!-- end col-md-6 -->
         </div><!-- end row -->   
     </header>
@@ -71,10 +81,10 @@
                 <div class="col-md-5 pe-5">
                     <h2 class="fs-2 text-black text-uppercase fw-light">Herrajes de Alta Calidad para Cada Proyecto</h2>
                     <p class="fs-4 text-secondary lh-base mt-3 fw-light">
-                        Descubre nuestra amplia gama de herrajes diseñados para aportar  funcionalidad y estilo a tus proyectos. 
+                        Descubre nuestra amplia gama de herrajes diseñados para aportar  funcionalidad y estilo a todo tipo de proyectos. 
                     </p>
                     <p class="fs-4 text-secondary lh-base mt-3 fw-light">
-                        Explora nuestras categorías y  encuentra las soluciones perfectas para tus necesidades.
+                        Explora nuestras categorías y  encuentra las soluciones perfectas para tus clientes.
                     </p>
                     <a href="#" class="btn-call-to-action mt-5">
                        <span>
@@ -112,6 +122,9 @@
                         <h3 class="fs-3">Puertas</h3>
                     </a>
                 </div>
+                <small class="text-center mt-5 text-secondary fst-italic fw-light">
+                    *Solo ventas disponibles para distribuidores autorizados
+                </small>
             </div><!-- end row -->
         </section>
         <!-- end our products -->
@@ -119,7 +132,7 @@
         <section class="banner">
             <div class="container">
                 <h2 class="text-center text-uppercase text-black fs-1 fw-light pt-0 px-0 pt-lg-3 px-lg-5">
-                    Los herrajes perfectos para la cASA de tus sueños
+                    Los herrajes perfectos <br> para la cASA perfecta
                 </h2>
                 <a href="#" class="btn-call-to-action mt-5">
                     <span>
@@ -178,10 +191,10 @@
                 <article class="col-md-5">
                     <div class="container-fluid px-4 mx-auto">
                         <p class="ps-3 fs-4 text-secondary lh-base mt-3 fw-light">
-                            Radem es líder en la producción y venta de herrajes, respaldada por la experiencia de sus fundadores y una inversión tecnológica continua. Nos esforzamos por ofrecer productos de vanguardia que satisfagan las demandas del mercado.
+                            Radem es líder en la producción y venta de herrajes, enfocándose en satisfacer las necesidades de distribuidores exclusivamente. Respaldados por la experiencia de nuestros fundadores y una inversión tecnológica continua, ofrecemos soluciones innovadoras que se adaptan al mercado.
                         </p>
                         <p class="ps-3 fs-4 text-secondary lh-base mt-3 fw-light">
-                            Nos comprometemos con la calidad. Contamos con un equipo exclusivo dedicado a mejorar nuestros procesos para garantizar productos excelentes. Nuestra misión es impulsar soluciones innovadoras en la producción de herrajes.
+                            Nuestra misión es impulsar la excelencia en la producción de herrajes. Contamos con un equipo enfocado en las demandas específicas de nuestros distribuidores.
                         </p>
                     </div><!-- end container -->
                 </article><!-- end col 5 -->
@@ -258,9 +271,9 @@
     </main>
     <footer class="py-3 text-center text-white mt-5">
         <h3 class="fs-6">© 2024 Radem</h3>
-        <h3 class="fs-6">Diseño por:
+        <!-- <h3 class="fs-6">Diseño por:
             <a href="https://twc.com.ar">The Wireframes Compay</a>
-        </h3>
+        </h3> -->
     </footer>
     <div class="wa">
         <img src="./assets/img/icons/icon-whatsapp.svg" alt="">
@@ -272,12 +285,30 @@
         document.addEventListener('DOMContentLoaded', function() {
             var navbar = document.querySelector('.menu');
     
+            // Agregar clase 'scrolled' cuando se desplaza
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) { 
+                if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
+            });
+    
+            // Ajustar el desplazamiento de anclaje
+            var offsetHeight = navbar.offsetHeight;
+    
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+    
+                    var target = document.querySelector(this.getAttribute('href'));
+                    var targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    
+                    window.scrollTo({
+                        top: targetPosition - offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
     </script>

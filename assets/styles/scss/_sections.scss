@@ -1,54 +1,66 @@
-// universal selector
-*{
+// Universal selector
+* {
     box-sizing: border-box;
     font-family: $mainFont;
     overflow-x: hidden;
 }
-// header
-header{
-    .menu{
+
+// Header
+header {
+    position: relative;
+    .navbar-expand-lg .navbar-nav .dropdown-menu{
+        position: static!important;
+        z-index: 1000!important;
+    }
+    .dropdown-menu {
+        z-index: 1000; 
+    }
+    .menu {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         padding: 8px 24px;
-        z-index: 300;
+        z-index: 5000;
+        .logo{
+            position: absolute;
+            top: 12px;
+        }
         &.scrolled {
-            // background-color: rgba(255, 255, 255,.7);
-            // border-bottom: solid 1px $thirdColor;
             background-color: white;
         }
-        ul{
-            li{
+        ul {
+            li {
                 text-transform: uppercase;
-                a{
+                a {
                     font-weight: 320;
                     text-decoration: none;
-                    color:$secondaryColor;
+                    color: $secondaryColor;
                     background-image: linear-gradient(currentColor, currentColor);
                     background-position: 0% 100%;
                     background-repeat: no-repeat;
                     background-size: 0% 2px;
                     transition: background-size .3s;
-                    &:hover{
-                        color: $mainColor!important;
+                    &:hover {
+                        color: $mainColor !important;
                         background-size: 100% 2px;
                     }
-                    &.fs-6{
-                        font-size: .9em!important;
+                    &.fs-6 {
+                        font-size: .9em !important;
                     }
                 }
             }
         }
     }
-    .col-md-8{
-        img{
+    
+    .col-md-8 {
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    h1{
+    h1 {
         padding-left: 30px;
     }
 }
@@ -94,6 +106,7 @@ header{
 // productos destacados
 .featured-products{
     .carousel{
+        position: static;
         .slider{
             box-sizing: border-box;
             gap: 1%;
@@ -153,6 +166,9 @@ footer{
     width: 70px;
     height: 70px;
 }
+    .wa img{
+        width: 100%;
+    }
 /////// RESPONSIVE ////////
 @media (width <= 992px){
     body{
