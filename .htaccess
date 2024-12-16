@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirigir todas las solicitudes que no son archivos o directorios existentes a public_html/catalogo/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^catalogo/(.*)$ /public_html/catalogo/index.html [L]

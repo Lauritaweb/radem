@@ -28,7 +28,7 @@ $white:white;
     color: $white;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 8px 0;
+    padding: 8px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +38,7 @@ $white:white;
     font-size: 1.4em;
     position: relative;
     overflow: hidden;
+    border: none;
     transition: color 0.5s; // Para asegurar la transición del color del texto
 
     &:before {
