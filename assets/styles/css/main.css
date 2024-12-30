@@ -150,29 +150,44 @@ header h1 {
   padding: 8px 10px;
 }
 
-.featured-products .carousel {
-  position: static;
-}
-.featured-products .carousel .slider {
-  box-sizing: border-box;
-  gap: 1%;
-}
-.featured-products .carousel .slider figure {
-  border: 1px solid #B3ADAD;
-  padding: 0;
-  background: linear-gradient(180deg, #F8F8F6 0%, #F0F0F0 100%);
-  width: 24%;
-  box-sizing: border-box;
-}
-.featured-products .carousel .slider figure:hover {
-  border: solid 1px #000000;
-}
-.featured-products .carousel .slider figure img {
-  width: 100%;
-}
-.featured-products .carousel .slider figure a {
+.featured-products .carousel > div a {
   text-decoration: none;
-  color: rgb(155, 152, 152);
+}
+.featured-products .carousel > div a small {
+  color: #1E1E1E;
+}
+.featured-products .carousel > div a img {
+  width: auto;
+}
+.featured-products .carousel ul.slick-dots[role=tablist] {
+  display: flex !important;
+  justify-content: center;
+}
+.featured-products .carousel ul.slick-dots[role=tablist] li button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: transparent;
+  border: none;
+  background-color: #1E1E1E;
+  margin-right: 2px;
+}
+.featured-products .carousel button.slick-prev.slick-arrow {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 5000;
+  top: 120px;
+  color: transparent;
+}
+.featured-products .carousel button.slick-next.slick-arrow {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 5000;
+  top: -183px;
+  right: 10px;
+  color: transparent;
 }
 
 .contact input.form-control {

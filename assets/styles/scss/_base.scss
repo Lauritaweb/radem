@@ -39,7 +39,7 @@ $white:white;
     position: relative;
     overflow: hidden;
     border: none;
-    transition: color 0.5s; // Para asegurar la transición del color del texto
+    transition: color 0.5s; 
 
     &:before {
         content: "";
@@ -50,11 +50,11 @@ $white:white;
         height: 100%;
         background-color: $white;
         z-index: 0;
-        transition: left 0.5s; // Haciendo la animación más rápida
+        transition: left 0.5s; 
     }
 
     &:hover {
-        color: $mainColor !important; // Aseguramos que el color cambie al hacer hover
+        color: $mainColor !important; 
         border: solid $mainColor 1px;
 
         &:before {
@@ -65,7 +65,7 @@ $white:white;
     span {
         position: relative;
         z-index: 1;
-        color: inherit; // Para asegurarnos de que el color se hereda correctamente
+        color: inherit; 
     }
 }
 
