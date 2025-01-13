@@ -66,6 +66,10 @@ header .navbar-expand-lg .navbar-nav .dropdown-menu {
   position: static !important;
   z-index: 1000 !important;
 }
+header ul li a.dropdown-item:active {
+  background-color: #ff1500 !important;
+  color: white !important;
+}
 header .dropdown-menu {
   z-index: 1000;
 }
@@ -236,6 +240,7 @@ footer a {
   }
   .header .navbar-toggler {
     margin-top: 8px;
+    background-color: white !important;
   }
   .header .menu.scrolled {
     padding-bottom: 8px;

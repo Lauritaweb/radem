@@ -12,9 +12,14 @@ header {
         position: static!important;
         z-index: 1000!important;
     }
+    ul li a.dropdown-item:active{
+        background-color: $mainColor!important;
+        color: white!important;
+    }
     .dropdown-menu {
         z-index: 1000; 
     }
+
     .menu {
         position: fixed;
         top: 0;
@@ -214,6 +219,7 @@ footer{
         margin-top: 10px;
         .navbar-toggler{
             margin-top: 8px;
+            background-color: white!important;
         }
         .menu.scrolled{
             padding-bottom: 8px;
