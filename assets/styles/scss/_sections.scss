@@ -127,13 +127,14 @@ header {
             justify-content: center;
             li{
                 button{
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    color: transparent;
-                    border: none;
-                    background-color: $secondaryColor;
-                    margin-right: 2px;
+                    // width: 15px!important;
+                    // height: 15px!important;
+                    border-radius: 50%!important;
+                    color: transparent!important;
+                    border: none!important;
+                    background-color: $secondaryColor!important;
+                    margin-right: 2px!important;
+                    transform: scaleY(.8);
                 }
             }
         }
@@ -144,12 +145,6 @@ header {
             z-index: 5000;
             top:120px;
             color: transparent;
-            // arrow <
-            // &:before{
-            //     content: "<";
-            //     color:$black;
-            //     font-size: 2em;
-            // }
         }
         button.slick-next.slick-arrow{
             background-color: transparent;
@@ -159,12 +154,17 @@ header {
             top:-183px;
             right: 10px;
             color: transparent;
-            // arrow >
-            // &:after{
-            //     content: ">";
-            //     color:$black;
-            //     font-size: 2em;
-            // }
+        }
+    }
+    button.slick-prev.slick-arrow,
+    button.slick-next.slick-arrow {
+        background-color: transparent !important;
+        border: none !important;
+        z-index: 5000;
+        color: transparent !important;
+        &::before, &::after {
+            content: "" !important; 
+            display: none !important; 
         }
     }
 }

@@ -168,13 +168,12 @@ header h1 {
   justify-content: center;
 }
 .featured-products .carousel ul.slick-dots[role=tablist] li button {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  color: transparent;
-  border: none;
-  background-color: #1E1E1E;
-  margin-right: 2px;
+  border-radius: 50% !important;
+  color: transparent !important;
+  border: none !important;
+  background-color: #1E1E1E !important;
+  margin-right: 2px !important;
+  transform: scaleY(0.8);
 }
 .featured-products .carousel button.slick-prev.slick-arrow {
   background-color: transparent;
@@ -192,6 +191,19 @@ header h1 {
   top: -183px;
   right: 10px;
   color: transparent;
+}
+.featured-products button.slick-prev.slick-arrow,
+.featured-products button.slick-next.slick-arrow {
+  background-color: transparent !important;
+  border: none !important;
+  z-index: 5000;
+  color: transparent !important;
+}
+.featured-products button.slick-prev.slick-arrow::before, .featured-products button.slick-prev.slick-arrow::after,
+.featured-products button.slick-next.slick-arrow::before,
+.featured-products button.slick-next.slick-arrow::after {
+  content: "" !important;
+  display: none !important;
 }
 
 .contact input.form-control {
